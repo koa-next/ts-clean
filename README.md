@@ -1,8 +1,6 @@
 # ts-clean
 
-[![Build Status](https://travis-ci.org/PLDaily/ts-clean.svg?branch=master)](https://travis-ci.org/PLDaily/ts-clean)
 [![npm](https://img.shields.io/npm/v/ts-clean.svg)](https://www.npmjs.com/package/ts-clean)
-[![npm](https://img.shields.io/npm/dt/ts-clean.svg)](https://www.npmjs.com/package/ts-clean)
 [![npm](https://img.shields.io/npm/l/ts-clean.svg)](https://www.npmjs.com/package/ts-clean)
 
 ## Overview
