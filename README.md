@@ -7,7 +7,7 @@
 
 ## Overview
 
-> 😎A Tool For Cleaning Up JavaScript File Built Using TypeScript
+> A Tool For Cleaning Up JavaScript File Built Using TypeScript
 
 ## Install
 
@@ -44,13 +44,13 @@ yarn add ts-clean --dev
 
 ## Example
 
-- clean all js files built using typeScript in the current directory
+- clean all js files built using TypeScript in the current directory
 
 ```sh
 ts-clean
 ```
 
-- clean all js files built using typeScript in the app directory
+- clean all js files built using TypeScript in the app directory
 
 ```sh
 ts-clean -d app
@@ -58,7 +58,7 @@ ts-clean -d app
 
 ## Help
 
-If you installed ts-node in the global installation environment, you can use `ts-clean --help` for help.
+If you installed ts-clean in the global installation environment, you can use `ts-clean --help` for help.
 
 ## LICENSE
 
