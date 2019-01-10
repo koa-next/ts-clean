@@ -12,18 +12,27 @@ const cli = meow({
     ${chalk_1.default.bold('Usage')}
       $ ts-clean -d <source>
     ${chalk_1.default.bold('Options')}
-      -d, --dir               dir(default pwd)
+      -d, --dir               directory(default pwd)
+      -e, --etx               extension(default .js,.js.map)
       -v, --version           version
   `,
     flags: {
-        input: {
+        dir: {
             type: 'string',
             alias: 'd',
             default: PWD
+        },
+        ext: {
+            type: 'string',
+            alias: 'e',
+            default: '.js,.js.map'
         }
     },
     description: false
 });
-const inputDir = cli.flags.input;
-index_1.cleanJs(inputDir);
+const dirArr = cli.flags.dir.split(',');
+const extArr = cli.flags.ext.split(',');
+dirArr.map((item) => {
+    index_1.cleanJs(item, extArr);
+});
 //# sourceMappingURL=bin.js.map

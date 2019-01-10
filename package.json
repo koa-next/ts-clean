@@ -1,6 +1,6 @@
 {
   "name": "ts-clean",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Tool For Cleaning Up JavaScript File Built Using TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

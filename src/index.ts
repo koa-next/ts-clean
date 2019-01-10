@@ -2,30 +2,32 @@ import * as glob from 'globby';
 import * as path from 'path';
 import * as fs from 'fs';
 
-export function cleanJs(cwd: string) {
-  const fileList: string[] = [];
+export function cleanJs(cwd: string, etxArr: string[]): void {
+  let fileList: string[] = [];
   glob
     .sync(['**/*.ts', '!**/*.d.ts', '!**/node_modules'], { cwd })
     .forEach(f => {
-      const jf = removeSameNameJs(path.resolve(cwd, f));
-      if (jf) {
-        fileList.push(jf);
-      }
+      const jf = removeSameNameJs(path.resolve(cwd, f), etxArr);
+      fileList = [...fileList, ...jf];
     });
   if (fileList.length) {
-    console.info('These file was deleted because the same name ts file was exist!\n');
+    console.info(
+      'These file was deleted because the same name ts file was exist!\n'
+    );
     console.info('  ' + fileList.join('\n  ') + '\n');
   }
 }
 
-export function removeSameNameJs(f: string) {
+export function removeSameNameJs(f: string, etxArr: string[]): string[] {
   if (!f.endsWith('.ts') || f.endsWith('.d.ts')) {
-    return;
+    return [];
   }
-
-  const jf = f.substring(0, f.length - 2) + 'js';
-  if (fs.existsSync(jf)) {
-    fs.unlinkSync(jf);
-    return jf;
-  }
+  return etxArr.map((item: string) => {
+    const jf = `${f.substring(0, f.length - 3)}${item}`;
+    if (fs.existsSync(jf)) {
+      fs.unlinkSync(jf);
+      return jf;
+    }
+    return '';
+  });
 }
