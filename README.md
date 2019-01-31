@@ -5,7 +5,7 @@
 
 ## Overview
 
-> A Tool For Cleaning Up JavaScript File Built Using TypeScript
+> A Tool For Cleaning Up JavaScript File Built By TypeScript
 
 ## Install
 
@@ -36,26 +36,26 @@ yarn add ts-clean --dev
 
 ## Options
 
-| Option  | Description                                                 | default     |
-| ------- | ----------------------------------------------------------- | ----------- |
-| d       | the dir path you need to clean                              |     pwd     |
-| e       | the file extension you need to clean                         | .js,.js.map |
+| Option  | Description                                                 | default                   |
+| ------- | ----------------------------------------------------------- | ------------------------- |
+| d       | the dir path you need to clean                              | pwd                       |
+| e       | the file extension you need to clean                        | .js,.js.map,.jsx,.jsx.map |
 
 ## Example
 
-- clean all .js, .js.map files built using TypeScript in the current directory
+- clean all .js, .js.map files built by TypeScript in the current directory
 
 ```sh
 ts-clean
 ```
 
-- clean all js files built using TypeScript in the app1 and app2 directory
+- clean all js files built by TypeScript in the app1 and app2 directory
 
 ```sh
 ts-clean -d app1, app2
 ```
 
-- clean all js files built using TypeScript in the app directory
+- clean all js files built by TypeScript in the app directory
 
 ```sh
 ts-clean -d app -e .js

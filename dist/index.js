@@ -6,23 +6,23 @@ const fs = require("fs");
 function cleanJs(cwd, etxArr) {
     let fileList = [];
     glob
-        .sync(['**/*.ts', '!**/*.d.ts', '!**/node_modules'], { cwd })
+        .sync(['**/*.ts', '**/*.tsx', '!**/*.d.ts', '!**/node_modules'], { cwd })
         .forEach(f => {
         const jf = removeSameNameJs(path.resolve(cwd, f), etxArr);
         fileList = [...fileList, ...jf];
     });
     if (fileList.length) {
         console.info('These file was deleted because the same name ts file was exist!\n');
-        console.info('  ' + fileList.join('\n  ') + '\n');
+        console.info('  ' + fileList.filter(it => it.length > 0).join('\n  ') + '\n');
     }
 }
 exports.cleanJs = cleanJs;
 function removeSameNameJs(f, etxArr) {
-    if (!f.endsWith('.ts') || f.endsWith('.d.ts')) {
+    if (!f.endsWith('.ts') && !f.endsWith('.tsx') || f.endsWith('.d.ts')) {
         return [];
     }
     return etxArr.map((item) => {
-        const jf = `${f.substring(0, f.length - 3)}${item}`;
+        const jf = `${f.replace(/.tsx?/g, '')}${item}`;
         if (fs.existsSync(jf)) {
             fs.unlinkSync(jf);
             return jf;

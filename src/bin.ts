@@ -13,7 +13,7 @@ const cli = meow({
       $ ts-clean -d <source>
     ${chalk.bold('Options')}
       -d, --dir               directory(default pwd)
-      -e, --etx               extension(default .js,.js.map)
+      -e, --etx               extension(default .js,.js.map,.jsx,.jsx.map)
       -v, --version           version
   `,
   flags: {
@@ -25,7 +25,7 @@ const cli = meow({
     ext: {
       type: 'string',
       alias: 'e',
-      default: '.js,.js.map'
+      default: '.js,.js.map,.jsx,.jsx.map'
     }
   },
   description: false
