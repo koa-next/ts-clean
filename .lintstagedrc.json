@@ -1,0 +1,8 @@
+{
+  "linters": {
+    "**/*.{t,j}s": [
+      "tslint -c tslint.json -p tsconfig.json --fix",
+      "git add"
+    ]
+  }
+}
