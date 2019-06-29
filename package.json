@@ -22,6 +22,9 @@
   "files": [
     "dist"
   ],
+  "directories": {
+    "lib": "./dist"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "tslint": "tslint -c tslint.json -p tsconfig.json --fix",
