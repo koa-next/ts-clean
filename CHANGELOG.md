@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+This release marks a sparkly clean repo!
+The published package now only contains whats needed, halving the unpacked size,
+as well as greatly reducing the final install size by about 40mb!
+
+### Added
+  - `files` property to `package.json`
+    - This ensures only files required for consumers to use the package are published
+  - A `CHANGELOG` to make tracking changes and updating for consumers easier!
+  - `lint-staged` is now used to make contributing easier
+
+### Changed
+  - Updates all repo links to point to `koa-next`
+  - Moved `typescript` to `devDependencies` so that it's not installed by consumers
+
 ## [1.0.2] - 2019-01-31
 
 ### Added
