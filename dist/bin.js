@@ -8,7 +8,7 @@ const PWD = process.cwd();
 const cli = meow({
     help: `
     ${chalk_1.default.bold('Description')}
-      $ A Tool For Cleaning Up JavaScript File Built Using TypeScript
+      $ A tool for cleaning up JavaScript files compiled from TypeScript
     ${chalk_1.default.bold('Usage')}
       $ ts-clean -d <source>
     ${chalk_1.default.bold('Options')}
