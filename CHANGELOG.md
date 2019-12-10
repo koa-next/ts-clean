@@ -1,14 +1,13 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [Unreleased]
+### [1.0.3](https://github.com/koa-next/ts-clean/compare/v1.0.2...v1.0.3) (2019-12-10)
 
-This release marks a sparkly clean repo!
-The published package now only contains whats needed, halving the unpacked size,
-as well as greatly reducing the final install size by about 40mb!
+
+### Features
+
+* add new build file ([eee46ad](https://github.com/koa-next/ts-clean/commit/eee46ad6d1e071c8dc4377458b6f65698e52ad22))
 
 ### Added
   - `files` property to `package.json`
@@ -35,8 +34,3 @@ as well as greatly reducing the final install size by about 40mb!
 
 Initial release.
 
-[Unreleased]: https://github.com/koa-next/ts-clean/compare/v1.0.2...HEAD
-
-[1.0.2]: https://github.com/koa-next/ts-clean/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/koa-next/ts-clean/compare/81dcc0...v1.0.1
-[1.0.0]: https://github.com/koa-next/ts-clean/compare/81dcc0...v1.0.1
