@@ -23,7 +23,7 @@ export function removeSameNameJs(f: string, etxArr: string[]): string[] {
     return [];
   }
   return etxArr.map((item: string) => {
-    const jf = `${f.replace(/.tsx?/g, '')}${item}`;
+    const jf = `${f.replace(/\.tsx?/g, '')}${item}`;
     if (fs.existsSync(jf)) {
       fs.unlinkSync(jf);
       return jf;
