@@ -10,8 +10,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "globby": "^8.0.1",
-    "meow": "5.0.0",
-    "typescript": "^3.2.2"
+    "meow": "5.0.0"
   },
   "devDependencies": {
     "@types/globby": "^8.0.0",
@@ -21,6 +20,15 @@
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
     "tslint": "^5.12.0"
+    "lint-staged": "^8.2.1",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "lib": "./dist"
   },
   "scripts": {
     "test": "jest",
@@ -30,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PLDaily/ts-clean.git"
+    "url": "git+https://github.com/koa-next/ts-clean.git"
   },
   "keywords": [
     "typescript",
@@ -40,12 +48,12 @@
   "author": "PLDaily <pcd12321@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PLDaily/ts-clean/issues"
+    "url": "https://github.com/koa-next/ts-clean/issues"
   },
-  "homepage": "https://github.com/PLDaily/ts-clean#readme",
+  "homepage": "https://github.com/koa-next/ts-clean#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run tslint && git add ."
+      "pre-commit": "lint-staged"
     }
   },
   "engines": {
