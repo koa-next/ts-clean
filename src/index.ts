@@ -12,7 +12,7 @@ export function cleanJs(cwd: string, etxArr: string[]): void {
     });
   if (fileList.length) {
     console.info(
-      'These file was deleted because the same name ts file was exist!\n'
+      'These files were deleted because the corresponding ts files exist:\n'
     );
     console.info('  ' + fileList.filter(it => it.length > 0).join('\n  ') + '\n');
   }

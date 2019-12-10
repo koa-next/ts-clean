@@ -10,7 +10,8 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "globby": "^8.0.1",
-    "meow": "5.0.0"
+    "meow": "5.0.0",
+    "typescript": "^3.7.2"
   },
   "devDependencies": {
     "@types/globby": "^8.0.0",
