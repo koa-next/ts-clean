@@ -22,7 +22,7 @@ function removeSameNameJs(f, etxArr) {
         return [];
     }
     return etxArr.map((item) => {
-        const jf = `${f.replace(/.tsx?/g, '')}${item}`;
+        const jf = `${f.replace(/\.tsx?/g, '')}${item}`;
         if (fs.existsSync(jf)) {
             fs.unlinkSync(jf);
             return jf;
